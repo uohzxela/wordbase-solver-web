@@ -20,6 +20,7 @@ angular.module('myApp.home', ['ngRoute', 'ngFileUpload'])
 		if(files && files.length) {
 			var file = files[0];
 			console.log("uploading")
+			console.log("color: ", $scope.color);
 			Upload.upload({
 				url: 'http://52.74.179.193:8000/upload',
 				file: file,
