@@ -24,7 +24,7 @@ angular.module('myApp.home', ['ngRoute', 'ngFileUpload'])
 			Upload.upload({
 				url: 'http://52.74.179.193:8000/upload',
 				file: file,
-				fields: {'color': 'orange'}
+				fields: {'color': $scope.color}
 			}).progress(function(evt) {
 				var progressPercentage = parseInt(100.0 * evt.loaded/evt.total);
 				console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
