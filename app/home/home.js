@@ -10,7 +10,7 @@ angular.module('myApp.home', ['ngRoute', 'ngFileUpload'])
 }])
 
 .controller('HomeCtrl', ['$scope', 'Upload', function($scope, Upload) {
-	$scope.welcome = "welcome to wordbase solver"
+	$scope.color = 'orange';
 	$scope.$watch('files', function() {
 		$scope.formUpload = false;
 		console.log("before upload")
