@@ -11,17 +11,19 @@ angular.module('myApp.home', ['ngRoute', 'ngFileUpload'])
 
 .controller('HomeCtrl', ['$scope', 'Upload', function($scope, Upload) {
 	$scope.welcome = "welcome to wordbase solver"
-	$scope.$watch('file', function() {
+	$scope.$watch('files', function() {
+		$scope.formUpload = false;
 		console.log("before upload")
-		$scope.upload($scope.file);
+		$scope.upload($scope.files);
 	});
-
-	$scope.upload = function(file) {
-		if(file && file.length) {
+	$scope.upload = function(files) {
+		if(files && files.length) {
+			var file = files[0];
 			console.log("uploading")
 			Upload.upload({
-				url: 'http://localhost:5000/upload',
-				file: file
+				url: 'http://52.74.179.193:8000/upload',
+				file: file,
+				fields: {'color': 'orange'}
 			}).progress(function(evt) {
 				var progressPercentage = parseInt(100.0 * evt.loaded/evt.total);
 				console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
