@@ -17,7 +17,7 @@
 </div>
 <hr>
 <div class="row">
-	<div required name="file" ngf-select ng-model="files" class="col-xs-8 col-xs-offset-2 col-md-3 col-md-offset-4 btn btn-primary" ngf-multiple="false" ng-model-rejected="rejFiles"><span class="glyphicon glyphicon-export"></span>Upload a Wordbase screenshot</div>
+	<div required name="file" ngf-select ng-model="files" class="col-xs-8 col-xs-offset-2 col-md-3 col-md-offset-4 btn btn-primary" ngf-accept="'image/*'" ngf-multiple="false" ng-model-rejected="rejFiles"><span class="glyphicon glyphicon-export"></span>Upload a Wordbase screenshot</div>
 </div>
 <div class="row">
 	<img style="margin-top:30px" class="col-xs-8 col-xs-offset-2 col-md-3 col-md-offset-4" style="max-width:300px" ngf-src="files[0]"  ngf-accept="'image/*'">

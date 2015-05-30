@@ -4,7 +4,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.home',
-  'ngFileUpload'
+  'ngFileUpload',
+  'angular-loading-bar'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
